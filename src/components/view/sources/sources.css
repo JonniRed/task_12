@@ -40,3 +40,14 @@
     font-weight: 400;
     white-space: nowrap;
 }
+@media (max-width: 640px) {
+    .source__item {
+        margin: 2px;
+        padding: 5px 15px;
+        font-size: 14px;
+        border: solid 0.5px;
+    }
+    .source__item-name {
+        white-space: normal;
+    }
+}

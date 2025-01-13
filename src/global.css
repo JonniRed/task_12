@@ -41,3 +41,8 @@ footer .copyright a:hover {
 footer .copyright:before {
     content: "©";
 }
+@media (max-width: 640px) {
+    main {
+        margin: 50px 10px;
+    }
+}

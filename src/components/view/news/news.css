@@ -171,3 +171,30 @@
         padding-left: 25px;
     }
 }
+@media (max-width: 640px) {
+    .news {
+        max-width: 60%;
+        align-items: flex-end;
+        padding-left: 10px;
+    }
+    .news__item {
+        margin: 10px 0;
+    }
+    .news__item .news__meta-photo {
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+    .news__item .news__description h2 {
+        line-height: 20px;
+        font-size: 18px;
+    }
+    .news__item .news__description h3 {
+        font-size: 14px;
+    }
+    .news__description-content {
+        font-size: 12px;
+    }
+    .news__item .news__description .news__read-more a {
+        font-size: 13px;
+    }
+}

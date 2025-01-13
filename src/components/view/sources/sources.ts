@@ -20,9 +20,6 @@ class Sources implements Draw {
                     header.id = sourceName.textContent[0];
                     header.textContent = sourceName.textContent[0];
                     fragment.append(header);
-                    const container = document.createElement('div');
-                    container.id = 'news' + sourceName.textContent[0];
-                    fragment.append(container);
                 }
             }
 
@@ -33,7 +30,6 @@ class Sources implements Draw {
             }
 
             source?.append(fragment);
-            // source?.append(fragment);
         });
     }
 }
