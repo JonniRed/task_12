@@ -24,18 +24,16 @@ class Sources implements Draw {
                     container.id = 'news' + sourceName.textContent[0];
                     fragment.append(container);
                 }
-                if (document.querySelector(`#news${sourceName.textContent[0]}`)) {
-                    const div = document.querySelector(`#news${sourceName.textContent[0]}`);
-                    div?.append(sourceClone);
-                }
             }
 
             const sourceItem: HTMLElement | null = sourceClone.querySelector('.source__item');
             if (sourceItem && item.id) {
                 sourceItem.setAttribute('data-source-id', item.id);
+                fragment.append(sourceItem);
             }
 
             source?.append(fragment);
+            // source?.append(fragment);
         });
     }
 }
