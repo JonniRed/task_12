@@ -11,8 +11,10 @@ export class AppView {
     }
 
     drawNews(data: any): void {
-        const values = data?.articles ? data?.articles : alert('No actual news');
-        this.news.draw(values);
+        if (data.hasOwnProperty('articles')) {
+            const values = data.articles;
+            this.news.draw(values);
+        }
     }
 
     drawSources(data: any): void {

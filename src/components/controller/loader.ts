@@ -1,12 +1,9 @@
 import { Meta } from '../view/interface';
-
-interface Options {
-    [key: string]: any;
-}
+import { Options } from '../view/interface';
 
 class Loader {
-    baseLink: string;
-    options: object;
+    private baseLink: string;
+    private options: object;
 
     constructor(baseLink: any, options: Options) {
         this.baseLink = baseLink;

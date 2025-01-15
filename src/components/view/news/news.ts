@@ -1,20 +1,18 @@
 import './news.css';
-import { INews, Draw } from '../interface';
-
-type NewsItem = INews;
+import { IInfo, Draw } from '../interface';
 
 class News implements Draw {
-    draw(arg: NewsItem[]): void {
-        const news = arg.length >= 10 ? arg.filter((_item: NewsItem, idx: number) => idx < 10) : arg;
+    draw(arg: IInfo[]): void {
+        const news = arg.length >= 10 ? arg.filter((_item: IInfo, idx: number) => idx < 10) : arg;
 
         const fragment = document.createDocumentFragment();
         const newsItemTemp = document.querySelector<HTMLTemplateElement>('#newsItemTemp');
 
-        news.forEach((item: NewsItem, idx: number) => {
+        news.forEach((item: IInfo, idx: number) => {
             const newsClone: DocumentFragment | null = newsItemTemp?.content.cloneNode(true) as DocumentFragment;
 
             if (idx % 2) {
-                const newsEl = newsClone.querySelector<HTMLElement>('.news__item');
+                const newsEl: HTMLElement | null = newsClone.querySelector<HTMLElement>('.news__item');
                 newsEl?.classList.add('alt');
             }
 
